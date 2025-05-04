@@ -1,5 +1,6 @@
 eventSource.on(event_types.APP_READY, async()=>{
     ta.addEventListener('keydown', (evt) => {
+        console.log(evt);
         if (evt.altKey) {
             if (evt.key == 'I') {
                 evt.preventDefault();
