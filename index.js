@@ -8,8 +8,6 @@ document.addEventListener('keydown', (event) => {
         const inputField = document.querySelector('input[type="text"]'); // Adjust selector if needed
         if (inputField) {
             inputField.value = '/impersonate';
-            const event = new KeyboardEvent('keydown', { key: 'Enter', bubbles: true });
-            inputField.dispatchEvent(event);
         } else {
             console.error('Input field not found!');
         }
