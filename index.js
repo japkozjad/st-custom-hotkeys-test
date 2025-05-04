@@ -5,7 +5,7 @@ document.addEventListener('keydown', (event) => {
         event.preventDefault(); // Prevent default browser behavior
 
         // Trigger the /impersonate slash command
-        const inputField = document.querySelector('input[type="text"]'); // Adjust selector if needed
+        const inputField = document.querySelector('send_textarea'); // Adjust selector if needed
         if (inputField) {
             inputField.value = '/impersonate ';
             const event = new KeyboardEvent('keydown', { key: 'Enter', bubbles: true });
