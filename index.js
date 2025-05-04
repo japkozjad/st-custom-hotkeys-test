@@ -7,6 +7,8 @@ document.addEventListener('keydown', (event) => {
         const inputField = document.querySelector('#send_textarea');
         if (inputField) {
             inputField.value = '/impersonate ';
+            const event = new KeyboardEvent('keydown', { key: 'Enter', bubbles: true });
+            inputField.dispatchEvent(event);
         }
     }
 
