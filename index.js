@@ -27,10 +27,11 @@ document.addEventListener('keydown', (event) => {
     if (event.altKey && event.key.toLowerCase() === 'l') {
         event.preventDefault(); // Prevent default browser behavior
 
-        const systemButton = document.querySelector('.qr--button menu_button.interactable[title="Remove Last Message"]');
-        if (systemButton) {
-            systemButton.click();
-            document.querySelector('#send_textarea').focus();
+        const inputField = document.querySelector('#send_textarea');
+        if (inputField) {
+            inputField.value = '/delmode 1 ';
+            const event = new KeyboardEvent('keydown', { key: 'Enter', bubbles: true });
+            inputField.dispatchEvent(event);
         }
     }
 });
