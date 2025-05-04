@@ -24,7 +24,7 @@ document.addEventListener('keydown', (event) => {
     }
 
     // Delete Last Message
-    if (event.shiftKey && event.key.Delete) {
+    if (event.altKey && event.key.toLowerCase() === 'l') {
         event.preventDefault(); // Prevent default browser behavior
 
         const systemButton = document.querySelector('.qr--button menu_button.interactable[title="Remove Last Message"]');
