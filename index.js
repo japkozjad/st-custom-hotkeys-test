@@ -7,6 +7,7 @@ document.addEventListener('keydown', (event) => {
         const inputField = document.querySelector('#send_textarea');
         if (inputField) {
             inputField.value = '/impersonate ';
+            document.querySelector('#send_textarea').focus();
             const event = new KeyboardEvent('keydown', { key: 'Enter', bubbles: true });
             inputField.dispatchEvent(event);
         }
@@ -30,6 +31,7 @@ document.addEventListener('keydown', (event) => {
         const inputField = document.querySelector('#send_textarea');
         if (inputField) {
             inputField.value = '/delmode 1 ';
+            document.querySelector('#send_textarea').focus();
             const event = new KeyboardEvent('keydown', { key: 'Enter', bubbles: true });
             inputField.dispatchEvent(event);
         }
