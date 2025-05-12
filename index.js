@@ -45,4 +45,15 @@ document.addEventListener('keydown', (event) => {
             window.open(url, '_blank');
         }
     }
+
+    // Open DeepL
+    if (event.altKey && event.key.toLowerCase() === 't') {
+        event.preventDefault(); // Prevent default browser behavior
+
+        const selectedText = window.getSelection().toString().trim();
+        if (selectedText) {
+            const url = `https://www.deepl.com/translator#en/pl/${encodeURIComponent(selectedText)}`;
+            window.open(url, '_blank');
+        }
+    }
 });
