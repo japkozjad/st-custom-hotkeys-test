@@ -34,4 +34,15 @@ document.addEventListener('keydown', (event) => {
             inputField.dispatchEvent(event);
         }
     }
+
+    // Open Dictonary
+    if (event.altKey && event.key.toLowerCase() === 'd') {
+        event.preventDefault(); // Prevent default browser behavior
+
+        const selectedText = window.getSelection().toString().trim();
+        if (selectedText) {
+            const url = `https://diki.pl/${encodeURIComponent(selectedText)}`;
+            window.open(url, '_blank');
+        }
+    }
 });
