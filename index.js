@@ -24,6 +24,28 @@ document.addEventListener('keydown', (event) => {
         }
     }
 
+    // Random Event
+    if (event.altKey && event.key.toLowerCase() === 'r') {
+        event.preventDefault(); // Prevent default browser behavior
+
+        const systemButton = document.querySelector('.qr--button.menu_button[title="Random event"]');
+        if (systemButton) {
+            systemButton.click();
+            document.querySelector('#send_textarea').focus();
+        }
+    }
+
+    // Call
+    if (event.altKey && event.key.toLowerCase() === 'c') {
+        event.preventDefault(); // Prevent default browser behavior
+
+        const systemButton = document.querySelector('.qr--button.menu_button[title="Initialize Phone Call"]');
+        if (systemButton) {
+            systemButton.click();
+            document.querySelector('#send_textarea').focus();
+        }
+    }
+
     // Delete Last Message
     if (event.altKey && event.key.toLowerCase() === 'l') {
         event.preventDefault(); // Prevent default browser behavior
