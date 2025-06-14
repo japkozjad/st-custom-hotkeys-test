@@ -1,5 +1,6 @@
 // Add an event listener for keydown events
 document.addEventListener('keydown', (event) => {
+
     // Impersonate
     if (event.altKey && event.key.toLowerCase() === 'i') {
         event.preventDefault(); // Prevent default browser behavior
@@ -45,6 +46,18 @@ document.addEventListener('keydown', (event) => {
             document.querySelector('#send_textarea').focus();
         }
     }
+
+    // CYOA
+    if (event.altKey && event.key.toLowerCase() === ']') {
+        event.preventDefault(); // Prevent default browser behavior
+
+        const systemButton = document.querySelector('.qr--button.menu_button[title="Select response"]');
+        if (systemButton) {
+            systemButton.click();
+            document.querySelector('#send_textarea').focus();
+        }
+    }
+
 
     // Delete Last Message
     if (event.altKey && event.key.toLowerCase() === 'l') {
