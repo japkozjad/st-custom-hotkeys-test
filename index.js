@@ -17,7 +17,7 @@ document.addEventListener('keydown', (event) => {
     if (event.altKey && event.key.toLowerCase() === 's') {
         event.preventDefault(); // Prevent default browser behavior
 
-        const systemButton = document.querySelector('.qr--button.menu_button.qr--hasCtx.interactable[title="Write As System"]');
+        const systemButton = document.querySelector('.qr--button.menu_button[title="Write As System"]');
         if (systemButton) {
             systemButton.click();
             document.querySelector('#send_textarea').focus();
