@@ -26,7 +26,7 @@ document.addEventListener('keydown', (event) => {
     }
 
     // Random Event
-    if (event.altKey && event.key.toLowerCase() === 'r') {
+    if (event.altKey && event.key.toLowerCase() === '[') {
         event.preventDefault(); // Prevent default browser behavior
 
         const systemButton = document.querySelector('.qr--button.menu_button[title="Random event"]');
@@ -59,7 +59,7 @@ document.addEventListener('keydown', (event) => {
     }
 
     // Timeskip
-    if (event.altKey && event.key.toLowerCase() === 't') {
+    if (event.altKey && event.key.toLowerCase() === 'p') {
         event.preventDefault(); // Prevent default browser behavior
 
         const systemButton = document.querySelector('.qr--button.menu_button[title="Timeskip"]');
