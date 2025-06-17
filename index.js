@@ -58,6 +58,16 @@ document.addEventListener('keydown', (event) => {
         }
     }
 
+    // Timeskip
+    if (event.altKey && event.key.toLowerCase() === 't') {
+        event.preventDefault(); // Prevent default browser behavior
+
+        const systemButton = document.querySelector('.qr--button.menu_button[title="Timeskip"]');
+        if (systemButton) {
+            systemButton.click();
+            document.querySelector('#send_textarea').focus();
+        }
+    }
 
     // Delete Last Message
     if (event.altKey && event.key.toLowerCase() === 'l') {
