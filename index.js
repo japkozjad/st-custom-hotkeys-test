@@ -1,3 +1,5 @@
+import { executeSlashCommands, executeSlashCommandsWithOptions, registerSlashCommand } from '../../../slash-commands.js';
+
 // Add an event listener for keydown events
 document.addEventListener('keydown', (event) => {
 
@@ -68,6 +70,11 @@ document.addEventListener('keydown', (event) => {
             document.querySelector('#send_textarea').focus();
         }
     }
+
+    // Quick actions
+    if (event.altKey && event.key.toLowerCase() === 'q') {
+        event.preventDefault();
+         executeSlashCommands("/actionselect");
 
     // Delete Last Message
     if (event.altKey && event.key.toLowerCase() === 'l') {
