@@ -2,7 +2,7 @@
 document.addEventListener('keydown', (event) => {
 
     // Impersonate
-    if (event.altKey && event.key.toLowerCase() === 'i') {
+    if ((event.altKey || event.metaKey) && event.key.toLowerCase() === 'i') {
         event.preventDefault(); // Prevent default browser behavior
 
         const inputField = document.querySelector('#send_textarea');
@@ -15,7 +15,7 @@ document.addEventListener('keydown', (event) => {
     }
 
     // Write as System
-    if (event.altKey && event.key.toLowerCase() === 's') {
+    if ((event.altKey || event.metaKey) && event.key.toLowerCase() === 's') {
         event.preventDefault(); // Prevent default browser behavior
 
         const systemButton = document.querySelector('.qr--button.menu_button[title="Write As System"]');
@@ -37,7 +37,7 @@ document.addEventListener('keydown', (event) => {
     }
 
     // Call
-    if (event.altKey && event.key.toLowerCase() === 'c') {
+    if ((event.altKey || event.metaKey) && event.key.toLowerCase() === 'c') {
         event.preventDefault(); // Prevent default browser behavior
 
         const systemButton = document.querySelector('.qr--button.menu_button[title="Initialize Phone Call"]');
@@ -59,7 +59,7 @@ document.addEventListener('keydown', (event) => {
     }
 
     // Timeskip
-    if (event.altKey && event.key.toLowerCase() === 'p') {
+    if ((event.altKey || event.metaKey) && event.key.toLowerCase() === 'p') {
         event.preventDefault(); // Prevent default browser behavior
 
         const systemButton = document.querySelector('.qr--button.menu_button[title="Timeskip"]');
@@ -70,7 +70,7 @@ document.addEventListener('keydown', (event) => {
     }
 
     // Quick actions
-    if (event.altKey && event.key.toLowerCase() === 'q') {
+    if ((event.altKey || event.metaKey) && event.key.toLowerCase() === 'q') {
         event.preventDefault();
         
         const inputField = document.querySelector('#send_textarea');
@@ -83,7 +83,7 @@ document.addEventListener('keydown', (event) => {
     }
 
     // Delete Last Message
-    if (event.altKey && event.key.toLowerCase() === 'l') {
+    if (( event.altKey || event.metaKey) && event.key.toLowerCase() === 'l') {
         event.preventDefault(); // Prevent default browser behavior
 
         const inputField = document.querySelector('#send_textarea');
